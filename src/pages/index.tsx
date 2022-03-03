@@ -1,11 +1,13 @@
 import '@/assets/css/global.less';
 import 'antd/dist/antd.css';
 import styles from './index.less';
-import Anchor from '@/components/common/Anchor';
 import data from '@/assets/static/data.json';
+import Anchor from '@/components/common/Anchor';
+import { tagColor, authorColor } from '@/components/common/utils'
 
 export default function IndexPage() {
   const { timeline } = data;
+
   return (
     <div className={styles.container}>
       <div className={styles.header}>Title</div>
@@ -16,18 +18,14 @@ export default function IndexPage() {
         <div className={styles.main}>
           {timeline.map((item) => {
             return (
-              <div
-                key={item.year}
-                id={item.anchors}
-                style={{ height: '500px' }}
-              >
+              <div key={item.year} id={item.anchors}>
                 <div className={styles.title}>{item.year}</div>
                 <div className={styles.videoContainer}>
                   {item.video?.map(
                     ({ id, img, url, name, author, date, type }) => {
                       let imgStyle: any = img
                         ? {
-                            backgroundImage: `url("${require('../assets/image/' +
+                            backgroundImage: `url("${require('../assets/image/cover/' +
                               img)}")`,
                           }
                         : null;
@@ -41,13 +39,15 @@ export default function IndexPage() {
                             <div className={styles.mask}>
                               <span>{name}</span>
                               <div>
-                                <span>{author}</span>
+                                <span style={{ color: authorColor(author) }}>
+                                  {author}
+                                </span>
                                 <span>{date}</span>
                               </div>
                             </div>
                             <div
                               className={styles.sign}
-                              style={{ backgroundColor: 'rgba(255,145,83,1)' }}
+                              style={{ backgroundColor: tagColor(type) }}
                             >
                               {type}
                             </div>

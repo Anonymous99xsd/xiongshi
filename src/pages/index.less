@@ -25,6 +25,7 @@
 
     .main {
       flex: 1;
+      max-width: 1060px;
       background-color: #eee;
 
       .title {
@@ -41,6 +42,7 @@
       .videoContainer {
         display: flex;
         padding: 10px;
+        flex-wrap: wrap;
       }
 
       .videoContent {
@@ -71,10 +73,14 @@
           backdrop-filter: blur(4px);
           -webkit-backdrop-filter: blur(4px);
 
+          &>div,
+          &>span {
+            margin-top: 10px;
+          }
+
           & span {
             color: #fff;
             display: -webkit-box;
-            margin-top: 10px;
             letter-spacing: .6px;
             overflow: hidden;
             -webkit-line-clamp: 3;

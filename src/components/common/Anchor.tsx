@@ -1,10 +1,14 @@
+/**
+ * 左侧锚点
+ */
+
 import { Anchor } from 'antd';
 
 const { Link } = Anchor;
 
 interface timeline {
-  year: string,
-  anchors: string
+  year: string;
+  anchors: string;
 }
 
 interface anchorProps {
