@@ -19,6 +19,10 @@ export const authorColor = (author: string): string => {
       return 'rgb(249,215,172)';
     case '吃素的狮子':
       return 'rgb(244,248,165)';
+    case '乔治乔治君':
+      return 'rgb(53,67,117)';
+    case '视角姬':
+      return 'rgb(90,182,74)';
     default:
       return '#fff';
   }

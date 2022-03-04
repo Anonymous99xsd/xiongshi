@@ -3,7 +3,7 @@ import 'antd/dist/antd.css';
 import styles from './index.less';
 import data from '@/assets/static/data.json';
 import Anchor from '@/components/common/Anchor';
-import { tagColor, authorColor } from '@/components/common/utils'
+import { tagColor, authorColor } from '@/components/common/utils';
 
 export default function IndexPage() {
   const { timeline } = data;
@@ -61,6 +61,9 @@ export default function IndexPage() {
             );
           })}
         </div>
+      </div>
+      <div className={styles.test}>
+        <div className={styles.scrollbar}></div>
       </div>
     </div>
   );

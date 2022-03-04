@@ -1,5 +1,9 @@
 :root {
-  --color: #f7c35f;
+  --color: #ff8c00;
+}
+
+body {
+  background-color: #e0e5ec;
 }
 
 .container {
@@ -26,7 +30,6 @@
     .main {
       flex: 1;
       max-width: 1060px;
-      background-color: #eee;
 
       .title {
         position: sticky;
@@ -37,12 +40,14 @@
         justify-content: center;
         align-items: center;
         font-size: 36px;
+        z-index: 99;
       }
 
       .videoContainer {
         display: flex;
-        padding: 10px;
+        padding: 15px 10px 0px;
         flex-wrap: wrap;
+        background-color: #fff;
       }
 
       .videoContent {
@@ -51,8 +56,8 @@
         background-size: contain;
         background-repeat: no-repeat;
         background-position: center;
-        box-shadow: 0px 2px 4px rgba(0, 0, 0, .3);
-        margin: 0 5px;
+        box-shadow: 4px 4px 6px rgba(0, 0, 0, .4);
+        margin: 0 5px 15px;
         position: relative;
 
         &>a {
@@ -95,6 +100,8 @@
 
         &:hover .mask {
           opacity: 1;
+          box-shadow: inset -4px -4px 6px rgba(255, 255, 255, .3),
+            inset 4px 4px 6px rgba(0, 0, 0, .3);
         }
 
         .sign {
