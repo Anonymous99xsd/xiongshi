@@ -5,6 +5,8 @@ export const tagColor = (type: string): string => {
       return 'rgb(255,145,83)';
     case '生活':
       return 'rgb(14,111,93)';
+    case '短剧':
+      return 'rgb(26,115,232)';
     default:
       return '#000';
   }
