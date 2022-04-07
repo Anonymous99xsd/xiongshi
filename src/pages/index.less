@@ -53,12 +53,13 @@ body {
       .videoContent {
         width: 250px;
         height: 187.5px;
-        background-size: contain;
+        background-size: 250px;
         background-repeat: no-repeat;
         background-position: center;
         box-shadow: 4px 4px 6px rgba(0, 0, 0, .4);
         margin: 0 5px 15px;
         position: relative;
+        transition: .25s;
 
         &>a {
           width: inherit;
@@ -98,10 +99,12 @@ body {
           }
         }
 
+        &:hover {
+          background-size: 300px;
+        }
+
         &:hover .mask {
           opacity: 1;
-          box-shadow: inset -4px -4px 6px rgba(255, 255, 255, .3),
-            inset 4px 4px 6px rgba(0, 0, 0, .3);
         }
 
         .sign {
